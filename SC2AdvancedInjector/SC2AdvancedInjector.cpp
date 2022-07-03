@@ -5,8 +5,14 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 
+// Map bases location
+int x[] = { 275, 270, 276, 166, 43 };
+int y[] = { 829, 934, 1040, 1039, 1050 };
+
+// Store the amount of bases to loop trough
+int size = sizeof(x) / sizeof(x[0]);
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Sc2 advanced injector by Kenny" << std::endl;
 }
