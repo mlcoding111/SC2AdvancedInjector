@@ -1,5 +1,16 @@
 #include "Windows.h"
 #include "Keyboard.h"
+#include <iostream>
+/*
+    0x34 = 4
+    0x56 = V
+*/
+
+Keyboard::Keyboard(int base, int queen, int larva)
+    : base{ 0x34 }, queen{ 0x56 }, larva{ 0x22 }{
+    std::cout << "Keyboard success." << std::endl;
+}
+
 
 void Keyboard::PressKey(int key) {
     INPUT input;
@@ -8,4 +19,16 @@ void Keyboard::PressKey(int key) {
     input.ki.dwFlags = KEYEVENTF_EXTENDEDKEY;
 
     SendInput(1, &input, sizeof(INPUT));
+}
+
+void Keyboard::SelectQueen() {
+    this->PressKey(this->queen);
+}
+
+void Keyboard::SelectBase() {
+    this->PressKey(this->base);
+}
+
+void Keyboard::SelectLarva() {
+    this->PressKey(this->larva);
 }
