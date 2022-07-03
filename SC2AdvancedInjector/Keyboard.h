@@ -9,12 +9,8 @@ private:
 	int base;
 	int queen;
 public:
-	Keyboard(int base = 0x34, int queen = 0x56);
-
+	void PressKey();
 	void SelectQueen();
 	void SelectBase();
 	void Inject();
-
-
-	~Keyboard();
 };

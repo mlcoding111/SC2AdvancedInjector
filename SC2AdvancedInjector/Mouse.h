@@ -9,13 +9,8 @@ class Mouse
 private:
 
 public:
-
 	void RightClick();
 	void LeftClick();
 	void MoveMouse(int x, int y);
-
-
-
-
 };
 
