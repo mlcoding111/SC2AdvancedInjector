@@ -2,6 +2,9 @@
 //
 
 #include <iostream>
+#include "Keyboard.h"
+#include "Mouse.h"
+
 
 int main()
 {
