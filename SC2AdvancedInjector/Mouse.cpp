@@ -1,5 +1,11 @@
 #include "Mouse.h"
 #include <Windows.h>
+#include  <iostream>
+
+
+Mouse::Mouse() {
+    std::cout << "Mouse success." << std::endl;
+}
 
 void Mouse::LeftClick() {
     INPUT input;
