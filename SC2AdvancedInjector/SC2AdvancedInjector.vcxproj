@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Injector.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="SC2AdvancedInjector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Injector.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Mouse.h" />
   </ItemGroup>
