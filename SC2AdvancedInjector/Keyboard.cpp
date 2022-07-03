@@ -7,7 +7,7 @@
 */
 
 Keyboard::Keyboard(int base, int queen, int larva)
-    : base{ 0x34 }, queen{ 0x56 }, larva{ 0x22 }{
+    : base{ 0x33 }, queen{ 0x34 }, larva{ 0x56 }{
     std::cout << "Keyboard success." << std::endl;
 }
 
