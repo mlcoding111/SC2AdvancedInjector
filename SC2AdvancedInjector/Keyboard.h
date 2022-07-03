@@ -9,7 +9,7 @@ private:
 	int base;
 	int queen;
 public:
-	void PressKey();
+	void PressKey(int key);
 	void SelectQueen();
 	void SelectBase();
 	void Inject();
