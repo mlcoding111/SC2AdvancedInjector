@@ -21,9 +21,9 @@ int main()
     Keyboard keyboard;
 
     // i.MinimapInject();
-    //i.LocationInject();
-    // setPositions();
-    // START();
+    // i.LocationInject();
+    setPositions();
+    START();
     // printPos();
 
 }
@@ -48,7 +48,8 @@ void START() {
         }
         if (GetAsyncKeyState(VK_SPACE))
         {
-            i.MinimapInject();
+            i.LocationInject();
+            // i.MinimapInject();
         }
         Sleep(10);
     }

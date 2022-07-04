@@ -33,17 +33,27 @@ void Injector::LocationInject() {
 		auto  x = xLocation[n];
 		auto& y = yLocation[n];
 
-		// Move to base
+		// Move camera to base
 		this->m.Move(x, y);
+		this->m.LeftClick();
 
-
+		// Make a box to select queen close to hatchery
 		this->m.Move(screenX - 400, screenY + 250);
-		Sleep(500);
+		Sleep(10);
 		this->m.HoldleftClick();
-		Sleep(500);
+		Sleep(10);
 		this->m.Move(screenX + 400, screenY - 400);
-		Sleep(500);
+		Sleep(10);
 		this->m.ReleaseLeftClick();
+
+		// Move back the mouse at the hatchery
+		this->m.Move(screenX, screenY);
+
+		// Proceed to inject
+		this->k.SelectLarva();
+		this->m.LeftClick();
+
+	
 
 		// Display injects location
 		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;
