@@ -12,4 +12,4 @@
 
  * [x] Injector 
  * [ ] Read Current Map
- * [ ] Injector Types ( 1/3 )
+ * [ ] Injector Types ( 2/3 )
