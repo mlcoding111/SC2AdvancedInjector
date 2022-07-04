@@ -5,11 +5,10 @@
 #include <Windows.h>
 #include "Keyboard.h"
 #include "Mouse.h"
+#include "Injector.h"
 
-
-
-// Store the amount of bases to loop trough
-int size = sizeof(x) / sizeof(x[0]);
+void setPositions();
+Injector i;
 
 int main()
 {
@@ -18,4 +17,30 @@ int main()
     std::cout << "Sc2 advanced injector by Kenny" << std::endl;
     Mouse mouse;
     Keyboard keyboard;
+
+    // i.MinimapInject();
+
+    setPositions();
+}
+
+void setPositions() {
+    std::cout << "Please Proceed. Press X when you're done .." << std::endl;
+    while (1) {
+        // 0x58 = x key
+        if (GetAsyncKeyState(0x58))
+        {
+            printf("X Arrow key is Pressed");
+            break;
+        }
+        if (GetAsyncKeyState(VK_SPACE))
+        {
+            i.xLocation.clear();
+            i.yLocation.clear();
+
+            printf("Saving location");
+            
+        }
+        Sleep(10);
+    }
+
 }
