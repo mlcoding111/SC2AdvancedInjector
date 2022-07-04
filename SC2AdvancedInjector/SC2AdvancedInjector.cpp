@@ -23,6 +23,7 @@ int main()
     // i.MinimapInject();
     // i.LocationInject();
     setPositions();
+
     START();
     // printPos();
 

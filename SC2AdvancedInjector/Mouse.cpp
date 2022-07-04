@@ -92,4 +92,5 @@ void Mouse::MakeABox() {
     this->Move(screenX + 400, screenY - 400);
     Sleep(10);
     this->ReleaseLeftClick();
+    this->Move(screenX, screenY);
 }

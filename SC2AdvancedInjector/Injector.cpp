@@ -42,6 +42,7 @@ void Injector::LocationInject() {
 		this->k.SelectLarva();
 		this->m.LeftClick();	
 
+
 		// Display injects location
 		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;
 	}
