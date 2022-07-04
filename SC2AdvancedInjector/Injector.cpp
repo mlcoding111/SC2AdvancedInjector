@@ -20,12 +20,11 @@ void Injector::MinimapInject() {
 		// Display injects location
 		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;
 	}
+
 }
 
 void Injector::LocationInject() {
-	// Position center of screen
-	int screenX = GetSystemMetrics(SM_CXSCREEN) / 2;
-	int screenY = GetSystemMetrics(SM_CYSCREEN) / 2;
+
 
 	// Loop trough bases and move mouse
 	for (std::size_t n = 0; n < min(xLocation.size(), yLocation.size()); n++)
@@ -37,25 +36,14 @@ void Injector::LocationInject() {
 		this->m.Move(x, y);
 		this->m.LeftClick();
 
-		// Make a box to select queen close to hatchery
-		this->m.Move(screenX - 400, screenY + 250);
-		Sleep(10);
-		this->m.HoldleftClick();
-		Sleep(10);
-		this->m.Move(screenX + 400, screenY - 400);
-		Sleep(10);
-		this->m.ReleaseLeftClick();
-
-		// Move back the mouse at the hatchery
-		this->m.Move(screenX, screenY);
+		this->m.MakeABox();
 
 		// Proceed to inject
 		this->k.SelectLarva();
-		this->m.LeftClick();
-
-	
+		this->m.LeftClick();	
 
 		// Display injects location
 		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;
 	}
+
 }

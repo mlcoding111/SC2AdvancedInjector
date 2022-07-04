@@ -78,3 +78,18 @@ void Mouse::Move(int x, int y) {
 
     SendInput(1, &input, sizeof(INPUT));
 }
+
+void Mouse::MakeABox() {
+    // Position center of screen
+    int screenX = GetSystemMetrics(SM_CXSCREEN) / 2;
+    int screenY = GetSystemMetrics(SM_CYSCREEN) / 2;
+
+    // Make a box to select queen close to hatchery
+    this->Move(screenX - 400, screenY + 250);
+    Sleep(10);
+    this->HoldleftClick();
+    Sleep(10);
+    this->Move(screenX + 400, screenY - 400);
+    Sleep(10);
+    this->ReleaseLeftClick();
+}

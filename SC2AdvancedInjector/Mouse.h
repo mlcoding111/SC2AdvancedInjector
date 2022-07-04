@@ -15,5 +15,6 @@ public:
 	void Move(int x, int y);
 	void HoldleftClick();
 	void ReleaseLeftClick();
+	void MakeABox();
 };
 
