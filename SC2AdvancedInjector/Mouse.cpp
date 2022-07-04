@@ -29,7 +29,7 @@ void Mouse::RightClick() {
     SendInput(1, &input, sizeof(INPUT));
 }
 
-void Mouse::MoveMouse(int x, int y) {
+void Mouse::Move(int x, int y) {
     
     // Get screen W and H
     double fScreenWidth = ::GetSystemMetrics(SM_CXSCREEN) - 1;

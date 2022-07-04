@@ -12,6 +12,6 @@ public:
 	Mouse();
 	void RightClick();
 	void LeftClick();
-	void MoveMouse(int x, int y);
+	void Move(int x, int y);
 };
 
