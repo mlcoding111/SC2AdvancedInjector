@@ -15,4 +15,4 @@
 
 ## Misc
  * [ ] Read Current Map and load positions accordingly
- * [ ] 
+ * [ ] Read player current location to go back after injecting
