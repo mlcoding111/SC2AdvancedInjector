@@ -9,6 +9,7 @@
 
 void setPositions();
 void START();
+void printPos();
 Injector i;
 
 int main()
@@ -20,11 +21,20 @@ int main()
     Keyboard keyboard;
 
     // i.MinimapInject();
+    //i.LocationInject();
+    // setPositions();
+    // START();
+    // printPos();
 
-    setPositions();
-    START();
+}
 
-
+void printPos() {
+    POINT p;
+    while (1) {
+        if (GetCursorPos(&p)) {
+            std::cout << "x: " << p.x << "y:" << p.y << std::endl;
+        }
+    }
 }
 
 void START() {
