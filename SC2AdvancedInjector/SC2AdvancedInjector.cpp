@@ -8,6 +8,7 @@
 #include "Injector.h"
 
 void setPositions();
+void START();
 Injector i;
 
 int main()
@@ -21,8 +22,14 @@ int main()
     // i.MinimapInject();
 
     setPositions();
+    START();
 
+
+}
+
+void START() {
     std::cout << "Press Q to exit at any time." << std::endl;
+
     while (1) {
         // 0x51 = q key
         if (GetAsyncKeyState(0x51))
@@ -35,7 +42,6 @@ int main()
         }
         Sleep(10);
     }
-
 }
 
 void setPositions() {

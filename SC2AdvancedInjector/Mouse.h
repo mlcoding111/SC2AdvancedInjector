@@ -13,5 +13,7 @@ public:
 	void RightClick();
 	void LeftClick();
 	void Move(int x, int y);
+	void HoldleftClick();
+	void ReleaseLeftClick();
 };
 

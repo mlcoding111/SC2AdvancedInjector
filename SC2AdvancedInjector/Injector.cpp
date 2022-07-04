@@ -12,7 +12,7 @@ void Injector::MinimapInject() {
 	{
 		auto  x = xLocation[n];
 		auto& y = yLocation[n];
-		this->m.MoveMouse(x, y);
+		this->m.Move(x, y);
 		this->k.SelectLarva();
 		this->m.LeftClick();
 
@@ -23,4 +23,16 @@ void Injector::MinimapInject() {
 
 void Injector::LocationInject() {
 
+	// Loop trough bases and move mouse
+	for (std::size_t n = 0; n < std::min(xLocation.size(), yLocation.size()); n++)
+	{
+		auto  x = xLocation[n];
+		auto& y = yLocation[n];
+		this->m.Move(x, y);
+		this->k.SelectLarva();
+		this->m.LeftClick();
+
+		// Display injects location
+		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;
+	}
 }

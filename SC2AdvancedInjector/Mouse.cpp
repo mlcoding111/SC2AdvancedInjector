@@ -9,6 +9,10 @@ Mouse::Mouse() {
 
 void Mouse::LeftClick() {
     INPUT input;
+
+    ZeroMemory(&input, sizeof(input));
+
+    input.mi.time = 0;
     input.type = INPUT_MOUSE;
     input.mi.dwFlags = (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_LEFTDOWN);
     SendInput(1, &input, sizeof(INPUT));
@@ -18,8 +22,31 @@ void Mouse::LeftClick() {
     SendInput(1, &input, sizeof(INPUT));
 }
 
+void Mouse::HoldleftClick() {
+    INPUT input;
+    ZeroMemory(&input, sizeof(input));
+
+    input.mi.time = 0;
+    input.type = INPUT_MOUSE;
+    input.mi.dwFlags = (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_LEFTDOWN);
+    SendInput(1, &input, sizeof(INPUT));
+}
+
+void Mouse::ReleaseLeftClick() {
+    INPUT input;
+    ZeroMemory(&input, sizeof(input));
+
+    input.mi.time = 0;
+    input.type = INPUT_MOUSE;
+    input.mi.dwFlags = (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_LEFTUP);
+    SendInput(1, &input, sizeof(INPUT));
+}
+
 void Mouse::RightClick() {
     INPUT input;
+    ZeroMemory(&input, sizeof(input));
+
+    input.mi.time = 0;
     input.type = INPUT_MOUSE;
     input.mi.dwFlags = (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_RIGHTDOWN);
     SendInput(1, &input, sizeof(INPUT));
@@ -41,6 +68,9 @@ void Mouse::Move(int x, int y) {
 
     // Send Input
     INPUT input;
+    ZeroMemory(&input, sizeof(input));
+
+    input.mi.time = 0;
     input.type = INPUT_MOUSE;
     input.mi.dwFlags = MOUSEEVENTF_MOVE | MOUSEEVENTF_ABSOLUTE;
     input.mi.dx = fx;
