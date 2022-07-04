@@ -4,11 +4,11 @@
 
 ## Class
 
- * [ ] MouseHandler
- * [ ] KeyboardHandler
+ * [ x ] MouseHandler
+ * [ x ] KeyboardHandler
  
 ## Features
 
- * [ ] Injector 
+ * [ x ] Injector 
  * [ ] Read Current Map
  * [ ] Injector Types ( 3 )
