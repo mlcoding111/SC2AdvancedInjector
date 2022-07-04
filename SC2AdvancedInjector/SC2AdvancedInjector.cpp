@@ -41,13 +41,13 @@ int main()
 void setPositions() {
     i.xLocation.clear();
     i.yLocation.clear();
-    bool settingPost = true;
+
     std::cout << "Please Proceed. Press X when you're done .." << std::endl;
-    while (settingPost) {
+    while (1) {
         // 0x58 = x key
         if (GetAsyncKeyState(0x58))
         {
-            settingPost = false;
+            break;
         }
         if (GetAsyncKeyState(VK_SPACE))
         {
@@ -55,6 +55,7 @@ void setPositions() {
             POINT p;
 
             if (GetCursorPos(&p)) {
+                // Set new location to current mouse position
                 i.xLocation.push_back(p.x);
                 i.yLocation.push_back(p.y);
                 Beep(750, 500);
