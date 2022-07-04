@@ -6,7 +6,7 @@
 
  * [x] MouseHandler
  * [x] KeyboardHandler
- * [] Helpers
+ * [ ] Helpers
  
 ## Features
 
