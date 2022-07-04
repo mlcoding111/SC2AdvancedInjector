@@ -1,7 +1,6 @@
 #include "Injector.h"
 #include "Mouse.h"
 #include "Keyboard.h"
-#include <list>
 #include <iostream>
 
 void Injector::MinimapInject() {
@@ -16,7 +15,6 @@ void Injector::MinimapInject() {
 		this->m.MoveMouse(x, y);
 		this->k.SelectLarva();
 		this->m.LeftClick();
-
 
 		// Display injects location
 		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;

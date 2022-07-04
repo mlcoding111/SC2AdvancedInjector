@@ -4,6 +4,7 @@
 /*
     0x34 = 4
     0x56 = V
+    0x33 = 3
 */
 
 Keyboard::Keyboard(int base, int queen, int larva)
