@@ -1,5 +1,5 @@
 // SC2AdvancedInjector.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// https://github.com/nlohmann/json
 
 #include <iostream>
 #include <Windows.h>
@@ -22,8 +22,8 @@ int main()
 
     setPositions();
 
+    std::cout << "Press Q to exit at any time." << std::endl;
     while (1) {
-        std::cout << "Press Q to exit at any time." << std::endl;
         // 0x51 = q key
         if (GetAsyncKeyState(0x51))
         {
@@ -39,10 +39,11 @@ int main()
 }
 
 void setPositions() {
+    // Clear the vector
     i.xLocation.clear();
     i.yLocation.clear();
 
-    std::cout << "Please Proceed. Press X when you're done .." << std::endl;
+    std::cout << "Please Proceed. Press {x} when you're done .." << std::endl;
     while (1) {
         // 0x58 = x key
         if (GetAsyncKeyState(0x58))

@@ -12,7 +12,6 @@ Keyboard::Keyboard(int base, int queen, int larva)
     std::cout << "Keyboard success." << std::endl;
 }
 
-
 void Keyboard::PressKey(int key) {
     INPUT input;
     input.type = INPUT_KEYBOARD;
