@@ -22,21 +22,32 @@ int main()
 
     setPositions();
 
+    while (1) {
+        std::cout << "Press Q to exit at any time." << std::endl;
+        // 0x51 = q key
+        if (GetAsyncKeyState(0x51))
+        {
+            break;
+        }
+        if (GetAsyncKeyState(VK_SPACE))
+        {
+            i.MinimapInject();
+        }
+        Sleep(10);
+    }
 
-    return 0;
 }
 
 void setPositions() {
     i.xLocation.clear();
     i.yLocation.clear();
-
+    bool settingPost = true;
     std::cout << "Please Proceed. Press X when you're done .." << std::endl;
-    while (1) {
+    while (settingPost) {
         // 0x58 = x key
         if (GetAsyncKeyState(0x58))
         {
-
-            break;
+            settingPost = false;
         }
         if (GetAsyncKeyState(VK_SPACE))
         {
