@@ -1,24 +1,33 @@
 #include "Injector.h"
 
 void Injector::MinimapInject() {
-
 	// Select the queens
 	this->k.SelectQueen();
 
-	// Check if base still active
-	std::vector<int> rgb = this->i.getPixelColor(300, 300);
-	for (auto c : rgb) {
-		std::cout << c << std::endl;
-	}
+	// Light Green 0|140|0
+	// Strong Green 0|255|0
 
 	// Loop trough bases and move mouse
 	for (std::size_t n = 0; n < min(xLocation.size(), yLocation.size()); n++)
 	{
 		auto  x = xLocation[n];
 		auto& y = yLocation[n];
-		this->m.Move(x, y);
-		this->k.SelectLarva();
-		this->m.LeftClick();
+
+		// Check if base still active
+		std::vector<int> rgb = this->i.getPixelColor(x, y);
+
+		// Check if the base location is matching base color
+		if (rgb == i.LightGreenRgb || rgb == i.StrongGreenRgb) {
+			std::cout << "Base Detected At : {" << x << "." << y << "}" << std::endl;
+
+			this->m.Move(x, y);
+			this->k.SelectLarva();
+			this->m.LeftClick();
+		}
+		else {
+			// If no base detected..
+		}
+
 
 		// Display injects location
 		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;

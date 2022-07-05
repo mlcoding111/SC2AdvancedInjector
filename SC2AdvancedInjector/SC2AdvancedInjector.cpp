@@ -22,24 +22,32 @@ int main()
     Mouse mouse;
     Keyboard keyboard;
     Image im;
+
+    while (1) {
+        POINT p;
+        // 0x51 = q key
+        if (GetAsyncKeyState(0x51))
+        {
+            break;
+        }
+        if (GetAsyncKeyState(VK_SPACE))
+        {
+
+            if (GetCursorPos(&p)) {
+                std::vector<int> rgb = im.getPixelColor(p.x, p.y);
+                for (auto c : rgb) {
+                    std::cout << c << "|";
+                }
+                std::cout << "\n";
+            }
+
+
+        }
+        Sleep(10);
+    }
     
     // setPositions(); // Ask the position then start program
     // START(); // Listen for keypress to inject. This is the main loop
-}
-
-void getPixel() {
-    HDC hdc, hdcTemp;
-    hdc = GetDC(HWND_DESKTOP);
-    COLORREF _color = GetPixel(hdc, 300, 300);
-
-    int _red = GetRValue(_color);
-    int _green = GetGValue(_color);
-    int _blue = GetBValue(_color);
-
-    std::cout << _red << std::endl;
-
-    ReleaseDC(NULL, hdc);
-    
 }
 
 void printPos() {
