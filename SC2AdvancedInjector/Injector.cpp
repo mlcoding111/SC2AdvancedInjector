@@ -4,6 +4,7 @@
 #include "windows.h"
 #include <iostream>
 
+
 void Injector::MinimapInject() {
 	// Select the queens
 	this->k.SelectQueen();

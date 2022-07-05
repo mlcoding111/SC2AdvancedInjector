@@ -6,10 +6,12 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Injector.h"
+#include "Image.h"
 
 void setPositions();
 void START();
 void printPos();
+void getPixel();
 Injector i;
 
 int main()
@@ -19,14 +21,25 @@ int main()
     std::cout << "Sc2 advanced injector by Kenny" << std::endl;
     Mouse mouse;
     Keyboard keyboard;
+    Image im;
+    
+    // setPositions(); // Ask the position then start program
+    // START(); // Listen for keypress to inject. This is the main loop
+}
 
-    // i.MinimapInject();
-    // i.LocationInject();
-    setPositions();
+void getPixel() {
+    HDC hdc, hdcTemp;
+    hdc = GetDC(HWND_DESKTOP);
+    COLORREF _color = GetPixel(hdc, 300, 300);
 
-    START();
-    // printPos();
+    int _red = GetRValue(_color);
+    int _green = GetGValue(_color);
+    int _blue = GetBValue(_color);
 
+    std::cout << _red << std::endl;
+
+    ReleaseDC(NULL, hdc);
+    
 }
 
 void printPos() {
@@ -39,8 +52,8 @@ void printPos() {
 }
 
 void START() {
-    std::cout << "Press Q to exit at any time." << std::endl;
 
+    std::cout << "Press Q to exit at any time." << std::endl;
     while (1) {
         // 0x51 = q key
         if (GetAsyncKeyState(0x51))
@@ -49,8 +62,8 @@ void START() {
         }
         if (GetAsyncKeyState(VK_SPACE))
         {
-            i.LocationInject();
-            // i.MinimapInject();
+            // i.LocationInject();
+            i.MinimapInject();
         }
         Sleep(10);
     }
