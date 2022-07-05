@@ -1,5 +1,4 @@
 #include "Image.h"
-#include "Windows.h"
 
 std::vector<int> Image::getPixelColor(int x, int y) {
 
@@ -19,9 +18,6 @@ std::vector<int> Image::getPixelColor(int x, int y) {
     int _green = GetGValue(_color);
     int _blue = GetBValue(_color);
     std::vector<int> arr{_red, _green, _blue};
-
     ReleaseDC(NULL, hdc);
     return arr;
-
-
 }

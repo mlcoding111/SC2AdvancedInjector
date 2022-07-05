@@ -1,5 +1,9 @@
 #pragma once
 
+#include <Windows.h>
+#include  <iostream>
+
+
 /*
 	0x34 = 4
 	0x56 = V

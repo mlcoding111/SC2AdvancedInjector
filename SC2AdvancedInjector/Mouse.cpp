@@ -1,6 +1,5 @@
 #include "Mouse.h"
-#include <Windows.h>
-#include  <iostream>
+
 
 
 Mouse::Mouse() {

@@ -1,6 +1,9 @@
 #pragma once
-#include "Keyboard.h"
+#include <iostream>
 #include "Mouse.h"
+#include "Keyboard.h"
+#include "windows.h"
+#include "Image.h"
 #include <vector>
 /*
 	0x34 = 4
@@ -17,6 +20,7 @@ public:
 
 	Keyboard k;
 	Mouse m;
+	Image i;
 
 public:
 

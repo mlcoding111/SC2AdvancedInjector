@@ -1,13 +1,15 @@
 #include "Injector.h"
-#include "Mouse.h"
-#include "Keyboard.h"
-#include "windows.h"
-#include <iostream>
-
 
 void Injector::MinimapInject() {
+
 	// Select the queens
 	this->k.SelectQueen();
+
+	// Check if base still active
+	std::vector<int> rgb = this->i.getPixelColor(300, 300);
+	for (auto c : rgb) {
+		std::cout << c << std::endl;
+	}
 
 	// Loop trough bases and move mouse
 	for (std::size_t n = 0; n < min(xLocation.size(), yLocation.size()); n++)
