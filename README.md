@@ -11,5 +11,8 @@
 ## Features
 
  * [x] Injector 
- * [ ] Read Current Map
- * [ ] Injector Types ( 1/3 )
+ * [ ] Injector Types ( 2/3 )
+
+## Misc
+ * [ ] Read Current Map and load positions accordingly
+ * [ ] Read player current location to go back after injecting
