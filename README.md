@@ -17,5 +17,6 @@ There is actually 3 types of injections.
  * [x] Injector Types ( 2/2 )
 
 ## Misc
+ * [x] Check if base is still up
  * [ ] Read Current Map and load positions accordingly
  * [ ] Read player current location to go back after injecting
