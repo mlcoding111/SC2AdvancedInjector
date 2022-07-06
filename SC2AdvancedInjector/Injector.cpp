@@ -29,7 +29,7 @@ void Injector::MinimapInject() {
 		}
 		else {
 			// If no base detected..
-			std::cout << "No base detected at : { " << x << "," << y << " }" << std::endl;
+			std::cout << "Not base detected at : { " << x << "," << y << " }" << std::endl;
 		}
 
 	}
