@@ -11,18 +11,35 @@
 void setPositions();
 void START();
 void printPos();
-void getPixel();
+void getMousePixel();
+
 Injector i;
+Image im;
 
 int main()
 {
     // Sleep for 2 seconds then proceed to testing
     Sleep(2000);
+
     std::cout << "Sc2 advanced injector by Kenny" << std::endl;
     Mouse mouse;
     Keyboard keyboard;
-    Image im;
+    // getMousePixel(); // Listen for space key to print RGB value of current mouse location
+    setPositions(); // Ask the position then start program
+    START(); // Listen for keypress to inject. This is the main loop
+}
 
+void printPos() {
+    POINT p;
+    while (1) {
+        if (GetCursorPos(&p)) {
+            std::cout << "x: " << p.x << "y:" << p.y << std::endl;
+        }
+    }
+}
+
+// Get pixel color at mouse position on { SPACE } press
+void getMousePixel() {
     while (1) {
         POINT p;
         // 0x51 = q key
@@ -45,22 +62,10 @@ int main()
         }
         Sleep(10);
     }
-    
-    // setPositions(); // Ask the position then start program
-    // START(); // Listen for keypress to inject. This is the main loop
 }
 
-void printPos() {
-    POINT p;
-    while (1) {
-        if (GetCursorPos(&p)) {
-            std::cout << "x: " << p.x << "y:" << p.y << std::endl;
-        }
-    }
-}
-
+// Start main process and listen for key press
 void START() {
-
     std::cout << "Press Q to exit at any time." << std::endl;
     while (1) {
         // 0x51 = q key
@@ -89,7 +94,8 @@ void setPositions() {
         {
             break;
         }
-        if (GetAsyncKeyState(VK_SPACE))
+        // 0x50 = p key
+        if (GetAsyncKeyState(0x50))
         {
 
             POINT p;

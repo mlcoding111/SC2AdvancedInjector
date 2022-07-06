@@ -23,14 +23,15 @@ void Injector::MinimapInject() {
 			this->m.Move(x, y);
 			this->k.SelectLarva();
 			this->m.LeftClick();
+
+			// Display injects location
+			std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;
 		}
 		else {
 			// If no base detected..
+			std::cout << "Not base detected at : { " << x << "," << y << " }" << std::endl;
 		}
 
-
-		// Display injects location
-		std::cout << "Injecting at : { " << x << "," << y << " }" << std::endl;
 	}
 
 }
