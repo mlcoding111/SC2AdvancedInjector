@@ -1,5 +1,8 @@
 # SC2 Advanced Injector
 
+This bot is used to inject quickly by reading screen pixel and sending input to inject at the base location.
+There is actually 3 types of injections.
+
 # Roadmap
 
 ## Class
@@ -11,7 +14,7 @@
 ## Features
 
  * [x] Injector 
- * [ ] Injector Types ( 2/3 )
+ * [x] Injector Types ( 2/2 )
 
 ## Misc
  * [ ] Read Current Map and load positions accordingly
