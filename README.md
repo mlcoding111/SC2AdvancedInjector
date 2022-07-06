@@ -1,6 +1,6 @@
 # SC2 Advanced Injector
 
-This bot is used to inject quickly by reading screen pixel and sending input to inject at the base location.
+Starcraft II Advanced Injector is a bot used to inject quickly by reading screen pixel and sending input to inject at the base location.
 There is actually 3 types of injections.
 
 # Roadmap
