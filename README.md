@@ -1,5 +1,8 @@
 # SC2 Advanced Injector
 
+Starcraft II Advanced Injector is a bot used to inject quickly by reading screen pixel and sending input to inject at the base location.
+There is actually 3 types of injections.
+
 # Roadmap
 
 ## Class
@@ -11,8 +14,9 @@
 ## Features
 
  * [x] Injector 
- * [ ] Injector Types ( 2/3 )
+ * [x] Injector Types ( 2/2 )
 
 ## Misc
+ * [x] Check if base is still up
  * [ ] Read Current Map and load positions accordingly
  * [ ] Read player current location to go back after injecting
