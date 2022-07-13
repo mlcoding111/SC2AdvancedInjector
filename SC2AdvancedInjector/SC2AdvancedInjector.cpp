@@ -8,25 +8,27 @@
 #include "Injector.h"
 #include "Image.h"
 
+
+// Functions header
 void setPositions();
 void START();
 void printPos();
 void getMousePixel();
 
+// Global Variables
 Injector i;
 Image im;
+Mouse mouse;
+Keyboard keyboard;
 
 int main()
 {
-    // Sleep for 2 seconds then proceed to testing
     Sleep(2000);
 
-    std::cout << "Sc2 advanced injector by Kenny" << std::endl;
-    Mouse mouse;
-    Keyboard keyboard;
-    // getMousePixel(); // Listen for space key to print RGB value of current mouse location
-    setPositions(); // Ask the position then start program
-    START(); // Listen for keypress to inject. This is the main loop
+    std::cout << "SC2Advanced Injector by Kenny" << std::endl;
+    START();
+   
+    // START(); // Listen for keypress to inject. This is the main loop
 }
 
 void printPos() {
@@ -66,14 +68,14 @@ void getMousePixel() {
 
 // Start main process and listen for key press
 void START() {
+    setPositions(); // Ask the position then start program
     std::cout << "Press Q to exit at any time." << std::endl;
     while (1) {
-        // 0x51 = q key
-        if (GetAsyncKeyState(0x51))
+        if (GetAsyncKeyState(0x51)) // Exit if Q pressed
         {
             break;
         }
-        if (GetAsyncKeyState(VK_SPACE))
+        if (GetAsyncKeyState(VK_SPACE)) // Inject if SPACE pressed
         {
             // i.LocationInject();
             i.MinimapInject();
