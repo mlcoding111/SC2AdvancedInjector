@@ -23,25 +23,6 @@ System sys;
 int main()
 {
     Sleep(2000);
-
     std::cout << "SC2Advanced Injector by Kenny" << std::endl;
-    START();
-}
-
-// Start main process and listen for key press
-void START() {
-    sys.setPositions(); // Ask the position then start program
-    std::cout << "Press Q to exit at any time." << std::endl;
-    while (1) {
-        if (GetAsyncKeyState(0x51)) // Exit if Q pressed
-        {
-            break;
-        }
-        if (GetAsyncKeyState(VK_SPACE)) // Inject if SPACE pressed
-        {
-            // i.LocationInject();
-            i.MinimapInject();
-        }
-        Sleep(10);
-    }
+    sys.START();
 }

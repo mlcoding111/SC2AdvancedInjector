@@ -1,7 +1,8 @@
 #include "System.h"
 #include "Image.h"
-#include <iostream>
 
+
+// Simply return current mouse position
 void System::printPos() {
     POINT p;
     while (1) {
@@ -38,6 +39,7 @@ void System::getMousePixel() {
     }
 }
 
+// Ask for input to set mousue position
 void System::setPositions() {
     // Clear the vector
     this->i.xLocation.clear();
@@ -69,4 +71,22 @@ void System::setPositions() {
         Sleep(10);
     }
 
+}
+
+// Function that run to initiate the bot
+void System::START() {
+    this->setPositions(); // Ask the position then start program
+    std::cout << "Press Q to exit at any time." << std::endl;
+    while (1) {
+        if (GetAsyncKeyState(0x51)) // Exit if Q pressed
+        {
+            break;
+        }
+        if (GetAsyncKeyState(VK_SPACE)) // Inject if SPACE pressed
+        {
+            // i.LocationInject();
+            this->i.MinimapInject();
+        }
+        Sleep(10);
+    }
 }
