@@ -9,10 +9,6 @@
 #include "Image.h"
 #include "System.h"
 
-
-// Functions header
-void START();
-
 // Global Variables
 Injector i;
 Image im;

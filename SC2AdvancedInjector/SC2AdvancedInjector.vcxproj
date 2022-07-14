@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Base.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Injector.cpp" />
     <ClCompile Include="Keyboard.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="System.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Base.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Injector.h" />
     <ClInclude Include="Keyboard.h" />
