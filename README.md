@@ -9,6 +9,8 @@ There is actually 3 types of injections.
 
  * [x] MouseHandler
  * [x] KeyboardHandler
+ * [x] System
+ * [x] Base
  * [ ] Helpers
  
 ## Features
@@ -18,5 +20,7 @@ There is actually 3 types of injections.
 
 ## Misc
  * [x] Check if base is still up
+ * [ ] Create api for map data
  * [ ] Read Current Map and load positions accordingly
  * [ ] Read player current location to go back after injecting
+ * [ ] Create website with accounts
