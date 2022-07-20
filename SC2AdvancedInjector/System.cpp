@@ -1,6 +1,6 @@
 #include "System.h"
-#include "Image.h"
-
+#include "Maps.h"
+#include "Base.h"
 
 // Simply return current mouse position
 void System::printPos() {
@@ -89,4 +89,13 @@ void System::START() {
         }
         Sleep(10);
     }
+}
+
+void System::INIT() {
+    std::unordered_map <int, std::tuple<int, int>> Beckett = {
+        {{2},{3, 3}},
+        {{2},{3, 3}}
+    };
+    this->maps.push_back(Maps("Beckett", 16, Beckett));
+
 }
