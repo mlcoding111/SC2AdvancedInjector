@@ -16,16 +16,21 @@ using namespace std;
 
 
 // Global Variables
+/*
+* Used for debugging and future testing
 Injector i;
 Image im;
 Mouse mouse;
 Keyboard keyboard;
+*/
+
 System sys;
 
 int main()
 {
     Sleep(2000);
     std::cout << "SC2Advanced Injector by Kenny" << std::endl;    
+    // sys.setPositions();
     sys.INIT();
     // sys.START();
 }

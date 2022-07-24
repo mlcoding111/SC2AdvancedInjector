@@ -5,6 +5,7 @@
 #include "Injector.h"
 #include "Image.h"
 #include "Base.h"
+#include "Maps.h"
 
 
 class System
@@ -12,7 +13,7 @@ class System
 public:
     Injector i;
 
-    const int MAPS_COUNT = 7;
+    std::vector<Maps> maps;
 
     void printPos();
     void getMousePixel();

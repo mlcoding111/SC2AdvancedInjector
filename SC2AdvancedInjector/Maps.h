@@ -9,6 +9,7 @@ class Maps
 {
 public:
 	std::string Name;
+	// Will contain a vector of Bases
 	int basesCount;
 	// Old list of bases for that map
 	std::vector<std::tuple<short int, short int>> Bases;

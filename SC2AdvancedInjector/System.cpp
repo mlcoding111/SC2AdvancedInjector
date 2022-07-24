@@ -1,6 +1,5 @@
 #include "System.h"
-#include "Maps.h"
-#include "Base.h"
+
 
 // Simply return current mouse position
 void System::printPos() {
@@ -92,9 +91,29 @@ void System::START() {
 }
 
 void System::INIT() {
-    std::vector<std::tuple<short int, short int>> Beckett{ {3,3}, {4,5} };
+    // Vector which contain a vector of all bases location
+    std::vector<std::tuple<short int, short int>> Waterfalll{ 
+        {239, 838}, 
+        {196,831},
+        {206,894}, 
+        {136,827},
+        {242,928}, 
+        {212,962},
+        {234,1010}, 
+        {182,1041},
+        {85,857}, 
+        {106,907},
+        {75,940}, 
+        {111,976},
+        {123,1038}, 
+        {78,1031} 
+    };
+    // Will need to create a new base for each location then pass it into map
+    Maps p("Waterfall", Waterfalll.size(), Waterfalll);
+    this->maps.push_back(p);
 
-    for (auto& tuple : Beckett) {
+    // Iterate trough all bases positions of the maps
+    for (auto& tuple : Waterfalll) {
         std::cout << std::get<0>(tuple) << " " << std::get<1>(tuple) << std::endl;
     }
  }
