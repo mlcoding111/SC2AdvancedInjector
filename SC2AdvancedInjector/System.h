@@ -11,7 +11,7 @@ class System
 {
 public:
     Injector i;
-    std::vector<Maps> maps;
+
     const int MAPS_COUNT = 7;
 
     void printPos();

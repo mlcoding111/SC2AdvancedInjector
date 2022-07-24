@@ -63,7 +63,7 @@ void System::setPositions() {
                 this->i.xLocation.push_back(p.x);
                 this->i.yLocation.push_back(p.y);
                 Beep(750, 500);
-                std::cout << "Location saved successfully" << std::endl;
+                std::cout << "Location saved successfully at : { " << p.x << "." << p.y << " }" << std::endl;
                 std::cout << "Current vector size : " << this->i.xLocation.size() << std::endl;
             }
 
@@ -92,10 +92,9 @@ void System::START() {
 }
 
 void System::INIT() {
-    std::unordered_map <int, std::tuple<int, int>> Beckett = {
-        {{2},{3, 3}},
-        {{2},{3, 3}}
-    };
-    this->maps.push_back(Maps("Beckett", 16, Beckett));
+    std::vector<std::tuple<short int, short int>> Beckett{ {3,3}, {4,5} };
 
-}
+    for (auto& tuple : Beckett) {
+        std::cout << std::get<0>(tuple) << " " << std::get<1>(tuple) << std::endl;
+    }
+ }
