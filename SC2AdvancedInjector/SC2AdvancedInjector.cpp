@@ -32,5 +32,6 @@ int main()
     std::cout << "SC2Advanced Injector by Kenny" << std::endl;    
     // sys.setPositions();
     sys.INIT();
+    std::cout << sys.maps[0].Name << std::endl;
     // sys.START();
 }
